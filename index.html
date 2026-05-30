@@ -3,205 +3,253 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>নতুন Bal AI আসছে</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <title>Nur GPT নতুন AI আসছে | বাংলাদেশের সেরা AI</title>
+  <meta name="description" content="Nur GPT — বাংলাদেশের সবচেয়ে শক্তিশালী AI। নতুন রূপে আসছে। আপডেট পেতে Telegram-এ যুক্ত হন।"/>
+  <meta name="keywords" content="Nur GPT, NurGPT, বাংলা AI, AI Bangladesh, bangla chatbot, artificial intelligence bangla, KDex AI"/>
+  <meta name="author" content="KDex"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://nur-gpt.netlify.app"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://nur-gpt.netlify.app/"/>
+  <meta property="og:title" content="Nur GPT — নতুন AI আসছে"/>
+  <meta property="og:description" content="নতুন রূপে AI আসছে — চোখ রাখুন। আপডেট পেতে Telegram-এ যুক্ত হন।"/>
+  <meta property="og:image" content="https://nur-gpt.netlify.app/nur-gpt-og.jpg"/>
+  <meta property="og:locale" content="bn_BD"/>
+  <meta property="og:site_name" content="Nur GPT by KDex"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@kamilhussen24"/>
+  <meta name="twitter:title" content="Nur GPT — নতুন AI আসছে"/>
+  <meta name="twitter:description" content="নতুন রূপে AI আসছে — চোখ রাখুন। আপডেট পেতে Telegram-এ যুক্ত হন।"/>
+  <meta name="twitter:image" content="https://nur-gpt.netlify.app/nur-gpt-og.jpg"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nur GPT",
+    "alternateName": "NurGPT",
+    "url": "https://nur-gpt.netlify.app",
+    "description": "Nur GPT — বাংলাদেশের সবচেয়ে শক্তিশালী AI",
+    "publisher": {
+      "@type": "Organization",
+      "name": "KDex",
+      "url": "https://kdex.com",
+      "sameAs": ["https://t.me/KdexUpdate", "https://twitter.com/kamilhussen24"]
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet"/>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       min-height: 100vh;
-      background: #070b18;
+      background: #060a16;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 36px;
       font-family: 'Noto Sans Bengali', Arial, sans-serif;
-      padding: 24px 12px;
-      overflow: hidden;
+      padding: 32px 20px;
+      overflow-x: hidden;
+      gap: 0;
     }
 
-    /* ── countdown ── */
+    /* brand */
+    .brand {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .brand-name {
+      font-family: 'Courier New', monospace;
+      font-size: min(14vw, 4.4rem);
+      font-weight: 700;
+      background: linear-gradient(90deg, #00f5d4, #7b5ea7, #ff6b35, #00f5d4);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gs 5s linear infinite;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+    @keyframes gs { to { background-position: 300%; } }
+
+    /* tagline */
+    .tagline {
+      margin-top: 16px;
+      margin-bottom: 36px;
+      text-align: center;
+    }
+    .tagline h1 {
+      font-size: min(5.2vw, 1.35rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+    .tagline h1 em {
+      font-style: normal;
+      color: #00f5d4;
+    }
+
+    /* countdown */
     .countdown {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: min(2.5vw, 12px);
       width: 100%;
-      max-width: 360px;
-      gap: 0;
+      max-width: 400px;
+      margin-bottom: 36px;
     }
-
     .box {
+      flex: 1;
+      min-width: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
-      flex: 1;
+      gap: 7px;
     }
-
     .num {
       font-family: 'Courier New', monospace;
-      font-size: 11vw;
+      font-size: min(9vw, 2.8rem);
       font-weight: 700;
       color: #00f5d4;
-      background: rgba(0,245,212,0.06);
-      border: 1px solid rgba(0,245,212,0.2);
-      border-radius: 10px;
-      width: 20vw;
-      max-width: 80px;
-      height: 13vw;
-      max-height: 52px;
+      background: rgba(0,245,212,0.05);
+      border: 1px solid rgba(0,245,212,0.18);
+      border-radius: 12px;
+      width: 100%;
+      aspect-ratio: 1 / 0.9;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-shadow: 0 0 14px rgba(0,245,212,0.4);
-      transition: transform 0.12s ease;
+      text-shadow: 0 0 18px rgba(0,245,212,0.35);
+      transition: transform 0.1s ease;
     }
-
     .num.pop { transform: scale(1.07); }
-
     .lbl {
-      font-size: 2.2vw;
-      max-font-size: 10px;
-      letter-spacing: 0.05em;
-      color: #4a5568;
-      font-size: min(2.8vw, 11px);
+      font-size: min(2.5vw, 0.62rem);
+      letter-spacing: 0.07em;
+      color: #3d4f6b;
+      white-space: nowrap;
     }
-
     .sep {
       font-family: 'Courier New', monospace;
-      font-size: 7vw;
+      font-size: min(6.5vw, 1.9rem);
       font-weight: 700;
-      color: rgba(0,245,212,0.3);
-      margin-bottom: 20px;
+      color: rgba(0,245,212,0.22);
       flex-shrink: 0;
-      width: 5vw;
+      margin-bottom: 20px;
+      width: min(4vw, 16px);
       text-align: center;
     }
 
-    /* ── title ── */
-    .title {
+    /* sub text */
+    .sub {
       text-align: center;
-      width: 100%;
-      padding: 0 8px;
+      margin-bottom: 28px;
+      max-width: 320px;
     }
-
-    .title h1 {
-      font-family: 'Noto Sans Bengali', Arial, sans-serif;
-      font-size: min(6.5vw, 1.8rem);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.3;
-    }
-
-    .title h1 span {
-      background: linear-gradient(90deg, #00f5d4, #7b5ea7, #ff6b35);
-      background-size: 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shift 4s linear infinite;
-    }
-
-    @keyframes shift { to { background-position: 200%; } }
-
-    .title p {
-      margin-top: 8px;
-      font-size: min(3.8vw, 0.88rem);
+    .sub p {
+      font-size: min(4.2vw, 0.95rem);
       color: #6b7a99;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* ── button ── */
+    /* button */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 13px 28px;
+      gap: 9px;
+      padding: 15px 36px;
       background: #229ED9;
       color: #fff;
       font-family: 'Noto Sans Bengali', Arial, sans-serif;
-      font-size: min(4vw, 0.95rem);
+      font-size: min(4.2vw, 1rem);
       font-weight: 700;
       border-radius: 100px;
       text-decoration: none;
-      box-shadow: 0 8px 24px rgba(34,158,217,0.35);
-      transition: transform 0.16s, box-shadow 0.16s;
+      box-shadow: 0 8px 28px rgba(34,158,217,0.3);
+      transition: transform 0.15s, box-shadow 0.15s;
       white-space: nowrap;
     }
-
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(34,158,217,0.5); }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(34,158,217,0.5); }
     .btn:active { transform: scale(0.97); }
 
-    @media (min-width: 480px) {
-      .num { width: 80px; max-width: 80px; height: 72px; max-height: 72px; font-size: 2.2rem; }
-      .sep { font-size: 2rem; width: 24px; }
-      .lbl { font-size: 0.65rem; }
-      .title h1 { font-size: 2rem; }
-      .title p { font-size: 0.9rem; }
-      .btn { font-size: 0.95rem; }
+    @media (min-width: 500px) {
+      .brand-name { font-size: 4.4rem; }
+      .tagline h1 { font-size: 1.35rem; }
+      .num { font-size: 2.8rem; }
+      .sep { font-size: 1.9rem; width: 18px; }
+      .lbl { font-size: 0.62rem; }
+      .sub p { font-size: 0.95rem; }
+      .btn { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="countdown">
-    <div class="box">
-      <div class="num" id="d">00</div>
-      <div class="lbl">দিন</div>
-    </div>
-    <div class="sep">:</div>
-    <div class="box">
-      <div class="num" id="h">00</div>
-      <div class="lbl">ঘণ্টা</div>
-    </div>
-    <div class="sep">:</div>
-    <div class="box">
-      <div class="num" id="m">00</div>
-      <div class="lbl">মিনিট</div>
-    </div>
-    <div class="sep">:</div>
-    <div class="box">
-      <div class="num" id="s">00</div>
-      <div class="lbl">সেকেন্ড</div>
-    </div>
+  <div class="brand">
+    <div class="brand-name">Nur GPT</div>
   </div>
 
-  <div class="title">
-    <h1>নতুন Bal AI <span>আসছে</span></h1>
-    <p>প্রথম আপডেট পেতে Telegram-এ চোখ রাখুন</p>
+  <div class="tagline">
+    <h1>নতুন রূপে <em>AI</em> আসছে চোখ রাখুন 😡</h1>
+  </div>
+
+  <div class="countdown">
+    <div class="box"><div class="num" id="d">00</div><div class="lbl">দিন</div></div>
+    <div class="sep">:</div>
+    <div class="box"><div class="num" id="h">00</div><div class="lbl">ঘণ্টা</div></div>
+    <div class="sep">:</div>
+    <div class="box"><div class="num" id="m">00</div><div class="lbl">মিনিট</div></div>
+    <div class="sep">:</div>
+    <div class="box"><div class="num" id="s">00</div><div class="lbl">সেকেন্ড</div></div>
+  </div>
+
+  <div class="sub">
+    <p>আপডেট পেতে হলে<br/>Telegram-এ যুক্ত হন</p>
   </div>
 
   <a class="btn" href="https://t.me/+DIKkgKBpsDE4ZWI9" target="_blank" rel="noopener">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
       <path d="M21.94 3.26a1.5 1.5 0 0 0-1.63-.35L2.17 10.4a1.5 1.5 0 0 0 .09 2.79l4.17 1.31 1.66 5.2a1.5 1.5 0 0 0 2.45.61l2.27-2.27 4.37 3.21a1.5 1.5 0 0 0 2.34-1.02l2.4-15a1.5 1.5 0 0 0-.98-1.97z" fill="white"/>
     </svg>
-    Telegram-এ Join করুন
+    Telegram-এ যুক্ত হন
   </a>
 
   <script>
-    const target = new Date(Date.now() + 30*24*60*60*1000);
+    // CHANGE LAUNCH DATE HERE
+    // new Date(YEAR, MONTH-1, DAY, HOUR, MIN, SEC)
+    // Example: July 30 2025 = new Date(2025, 6, 30, 0, 0, 0)
+    const LAUNCH = new Date(2026, 6, 1, 0, 0, 0); // July 1, 2026
+
     const ids = ['d','h','m','s'];
     let prev = {};
     function pad(n){ return String(n).padStart(2,'0'); }
     function pop(id){
       const el = document.getElementById(id);
       el.classList.add('pop');
-      setTimeout(()=>el.classList.remove('pop'), 120);
+      setTimeout(() => el.classList.remove('pop'), 110);
     }
     function tick(){
-      const diff = Math.max(0, target - Date.now());
+      const diff = Math.max(0, LAUNCH - Date.now());
       const vals = {
-        d: Math.floor(diff/864e5),
-        h: Math.floor((diff%864e5)/36e5),
-        m: Math.floor((diff%36e5)/6e4),
-        s: Math.floor((diff%6e4)/1e3)
+        d: Math.floor(diff / 864e5),
+        h: Math.floor((diff % 864e5) / 36e5),
+        m: Math.floor((diff % 36e5) / 6e4),
+        s: Math.floor((diff % 6e4) / 1e3)
       };
-      ids.forEach(id=>{
+      ids.forEach(id => {
         if(prev[id] !== vals[id]){ pop(id); document.getElementById(id).textContent = pad(vals[id]); }
       });
-      prev = {...vals};
+      prev = { ...vals };
     }
     tick();
     setInterval(tick, 1000);
