@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>নতুন Bal AI আসছে</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #070b18;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      padding: 20px 16px;
+    }
+
+    /* ── countdown ── */
+    .countdown {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .num {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 10vw, 4rem);
+      font-weight: 800;
+      color: #00f5d4;
+      background: rgba(0,245,212,0.06);
+      border: 1px solid rgba(0,245,212,0.18);
+      border-radius: 14px;
+      width: 100%;
+      text-align: center;
+      padding: 12px 4px;
+      line-height: 1;
+      text-shadow: 0 0 20px rgba(0,245,212,0.4);
+      transition: transform 0.12s ease;
+    }
+
+    .num.pop { transform: scale(1.08); }
+
+    .lbl {
+      font-size: clamp(0.55rem, 2vw, 0.7rem);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4a5568;
+      white-space: nowrap;
+    }
+
+    .sep {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 7vw, 3rem);
+      font-weight: 800;
+      color: rgba(0,245,212,0.3);
+      padding-top: 10px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* ── title ── */
+    .title { text-align: center; }
+
+    .title h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.9rem, 7vw, 4.2rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .title h1 span {
+      background: linear-gradient(90deg, #00f5d4, #7b5ea7, #ff6b35);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shift 4s linear infinite;
+    }
+
+    @keyframes shift { to { background-position: 200%; } }
+
+    .title p {
+      margin-top: 10px;
+      font-size: clamp(0.85rem, 3vw, 1rem);
+      color: #6b7a99;
+    }
+
+    /* ── button ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 36px;
+      background: #229ED9;
+      color: #fff;
+      font-family: 'Noto Sans Bengali', sans-serif;
+      font-size: clamp(0.9rem, 3.5vw, 1rem);
+      font-weight: 700;
+      border-radius: 100px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(34,158,217,0.35);
+      transition: transform 0.16s, box-shadow 0.16s;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(34,158,217,0.5); }
+    .btn:active { transform: scale(0.97); }
+  </style>
+</head>
+<body>
+
+  <div class="countdown">
+    <div class="box">
+      <div class="num" id="d">00</div>
+      <div class="lbl">দিন</div>
+    </div>
+    <div class="sep">:</div>
+    <div class="box">
+      <div class="num" id="h">00</div>
+      <div class="lbl">ঘণ্টা</div>
+    </div>
+    <div class="sep">:</div>
+    <div class="box">
+      <div class="num" id="m">00</div>
+      <div class="lbl">মিনিট</div>
+    </div>
+    <div class="sep">:</div>
+    <div class="box">
+      <div class="num" id="s">00</div>
+      <div class="lbl">সেকেন্ড</div>
+    </div>
+  </div>
+
+  <div class="title">
+    <h1>নতুন Bal AI <span>আসছে</span></h1>
+    <p>প্রথম আপডেট পেতে Telegram-এ চোখ রাখুন</p>
+  </div>
+
+  <a class="btn" href="https://t.me/KdexUpdate" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0">
+      <path d="M21.94 3.26a1.5 1.5 0 0 0-1.63-.35L2.17 10.4a1.5 1.5 0 0 0 .09 2.79l4.17 1.31 1.66 5.2a1.5 1.5 0 0 0 2.45.61l2.27-2.27 4.37 3.21a1.5 1.5 0 0 0 2.34-1.02l2.4-15a1.5 1.5 0 0 0-.98-1.97z" fill="white"/>
+    </svg>
+    Telegram-এ Join করুন
+  </a>
+
+  <script>
+    const target = new Date(Date.now() + 30*24*60*60*1000);
+    const ids = ['d','h','m','s'];
+    let prev = {};
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function pop(id){
+      const el = document.getElementById(id);
+      el.classList.add('pop');
+      setTimeout(()=>el.classList.remove('pop'), 120);
+    }
+    function tick(){
+      const diff = Math.max(0, target - Date.now());
+      const vals = {
+        d: Math.floor(diff/864e5),
+        h: Math.floor((diff%864e5)/36e5),
+        m: Math.floor((diff%36e5)/6e4),
+        s: Math.floor((diff%6e4)/1e3)
+      };
+      ids.forEach(id=>{
+        if(prev[id] !== vals[id]){ pop(id); document.getElementById(id).textContent = pad(vals[id]); }
+      });
+      prev = {...vals};
+    }
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
